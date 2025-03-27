@@ -1,0 +1,486 @@
+{
+  "diabetes": {
+    "code": "HCC 19",
+    "description": "Diabetes without Complication"
+  },
+  "diabetes type 2": {
+    "code": "HCC 19",
+    "description": "Diabetes without Complication"
+  },
+  "diabetes type 1": {
+    "code": "HCC 17",
+    "description": "Diabetes with Acute Complications"
+  },
+  "diabetic ketoacidosis": {
+    "code": "HCC 17",
+    "description": "Diabetes with Acute Complications"
+  },
+  "diabetic nephropathy": {
+    "code": "HCC 18",
+    "description": "Diabetes with Chronic Complications"
+  },
+  "diabetic retinopathy": {
+    "code": "HCC 18",
+    "description": "Diabetes with Chronic Complications"
+  },
+  "diabetic neuropathy": {
+    "code": "HCC 18",
+    "description": "Diabetes with Chronic Complications"
+  },
+  "hypertension": {
+    "code": "HCC 85",
+    "description": "Congestive Heart Failure"
+  },
+  "hypertensive heart disease": {
+    "code": "HCC 85",
+    "description": "Congestive Heart Failure"
+  },
+  "heart failure": {
+    "code": "HCC 85",
+    "description": "Congestive Heart Failure"
+  },
+  "chf": {
+    "code": "HCC 85",
+    "description": "Congestive Heart Failure"
+  },
+  "congestive heart failure": {
+    "code": "HCC 85",
+    "description": "Congestive Heart Failure"
+  },
+  "chronic kidney disease": {
+    "code": "HCC 136",
+    "description": "Chronic Kidney Disease, Stage 5"
+  },
+  "ckd stage 5": {
+    "code": "HCC 136",
+    "description": "Chronic Kidney Disease, Stage 5"
+  },
+  "ckd stage 4": {
+    "code": "HCC 137",
+    "description": "Chronic Kidney Disease, Severe (Stage 4)"
+  },
+  "ckd stage 3": {
+    "code": "HCC 138",
+    "description": "Chronic Kidney Disease, Moderate (Stage 3)"
+  },
+  "ckd": {
+    "code": "HCC 138",
+    "description": "Chronic Kidney Disease, Moderate (Stage 3)"
+  },
+  "copd": {
+    "code": "HCC 111",
+    "description": "Chronic Obstructive Pulmonary Disease"
+  },
+  "chronic obstructive pulmonary disease": {
+    "code": "HCC 111",
+    "description": "Chronic Obstructive Pulmonary Disease"
+  },
+  "emphysema": {
+    "code": "HCC 111",
+    "description": "Chronic Obstructive Pulmonary Disease"
+  },
+  "pulmonary fibrosis": {
+    "code": "HCC 112",
+    "description": "Fibrosis of Lung and Other Chronic Lung Disorders"
+  },
+  "asthma": {
+    "code": "HCC 110",
+    "description": "Asthma"
+  },
+  "lung cancer": {
+    "code": "HCC 8",
+    "description": "Metastatic Cancer and Acute Leukemia"
+  },
+  "breast cancer": {
+    "code": "HCC 12",
+    "description": "Breast, Prostate, Colorectal and Other Cancers and Tumors"
+  },
+  "prostate cancer": {
+    "code": "HCC 12",
+    "description": "Breast, Prostate, Colorectal and Other Cancers and Tumors"
+  },
+  "colorectal cancer": {
+    "code": "HCC 12",
+    "description": "Breast, Prostate, Colorectal and Other Cancers and Tumors"
+  },
+  "cancer": {
+    "code": "HCC 12",
+    "description": "Breast, Prostate, Colorectal and Other Cancers and Tumors"
+  },
+  "malignant": {
+    "code": "HCC 12",
+    "description": "Breast, Prostate, Colorectal and Other Cancers and Tumors"
+  },
+  "carcinoma": {
+    "code": "HCC 12",
+    "description": "Breast, Prostate, Colorectal and Other Cancers and Tumors"
+  },
+  "metastatic": {
+    "code": "HCC 8",
+    "description": "Metastatic Cancer and Acute Leukemia"
+  },
+  "metastasis": {
+    "code": "HCC 8",
+    "description": "Metastatic Cancer and Acute Leukemia"
+  },
+  "leukemia": {
+    "code": "HCC 8",
+    "description": "Metastatic Cancer and Acute Leukemia"
+  },
+  "lymphoma": {
+    "code": "HCC 10",
+    "description": "Lymphoma and Other Cancers"
+  },
+  "myeloma": {
+    "code": "HCC 10",
+    "description": "Lymphoma and Other Cancers"
+  },
+  "stroke": {
+    "code": "HCC 100",
+    "description": "Cerebrovascular Disease, Except Hemorrhage or Aneurysm"
+  },
+  "cerebrovascular accident": {
+    "code": "HCC 100",
+    "description": "Cerebrovascular Disease, Except Hemorrhage or Aneurysm"
+  },
+  "cva": {
+    "code": "HCC 100",
+    "description": "Cerebrovascular Disease, Except Hemorrhage or Aneurysm"
+  },
+  "tia": {
+    "code": "HCC 100",
+    "description": "Cerebrovascular Disease, Except Hemorrhage or Aneurysm"
+  },
+  "transient ischemic attack": {
+    "code": "HCC 100",
+    "description": "Cerebrovascular Disease, Except Hemorrhage or Aneurysm"
+  },
+  "cerebral hemorrhage": {
+    "code": "HCC 99",
+    "description": "Cerebral Hemorrhage"
+  },
+  "cerebral aneurysm": {
+    "code": "HCC 99",
+    "description": "Cerebral Hemorrhage"
+  },
+  "alzheimer": {
+    "code": "HCC 51",
+    "description": "Dementia With Complications"
+  },
+  "alzheimer's disease": {
+    "code": "HCC 51",
+    "description": "Dementia With Complications"
+  },
+  "dementia": {
+    "code": "HCC 52",
+    "description": "Dementia Without Complication"
+  },
+  "arthritis": {
+    "code": "HCC 40",
+    "description": "Rheumatoid Arthritis and Inflammatory Connective Tissue Disease"
+  },
+  "rheumatoid arthritis": {
+    "code": "HCC 40",
+    "description": "Rheumatoid Arthritis and Inflammatory Connective Tissue Disease"
+  },
+  "osteoarthritis": {
+    "code": "HCC 39",
+    "description": "Bone/Joint/Muscle Infections/Necrosis"
+  },
+  "gout": {
+    "code": "HCC 40",
+    "description": "Rheumatoid Arthritis and Inflammatory Connective Tissue Disease"
+  },
+  "depression": {
+    "code": "HCC 58",
+    "description": "Major Depressive, Bipolar, and Paranoid Disorders"
+  },
+  "major depressive disorder": {
+    "code": "HCC 58",
+    "description": "Major Depressive, Bipolar, and Paranoid Disorders"
+  },
+  "anxiety": {
+    "code": "HCC 59",
+    "description": "Reactive and Unspecified Psychosis, Delusional Disorders"
+  },
+  "generalized anxiety disorder": {
+    "code": "HCC 59",
+    "description": "Reactive and Unspecified Psychosis, Delusional Disorders"
+  },
+  "post-traumatic stress disorder": {
+    "code": "HCC 59",
+    "description": "Reactive and Unspecified Psychosis, Delusional Disorders"
+  },
+  "ptsd": {
+    "code": "HCC 59",
+    "description": "Reactive and Unspecified Psychosis, Delusional Disorders"
+  },
+  "obsessive compulsive disorder": {
+    "code": "HCC 59",
+    "description": "Reactive and Unspecified Psychosis, Delusional Disorders"
+  },
+  "ocd": {
+    "code": "HCC 59",
+    "description": "Reactive and Unspecified Psychosis, Delusional Disorders"
+  },
+  "obesity": {
+    "code": "HCC 22",
+    "description": "Morbid Obesity"
+  },
+  "morbid obesity": {
+    "code": "HCC 22",
+    "description": "Morbid Obesity"
+  },
+  "bmi 30": {
+    "code": "HCC 22",
+    "description": "Morbid Obesity"
+  },
+  "bmi 35": {
+    "code": "HCC 22",
+    "description": "Morbid Obesity"
+  },
+  "bmi 40": {
+    "code": "HCC 22",
+    "description": "Morbid Obesity"
+  },
+  "cirrhosis": {
+    "code": "HCC 27",
+    "description": "End-Stage Liver Disease"
+  },
+  "cirrhosis of the liver": {
+    "code": "HCC 27",
+    "description": "End-Stage Liver Disease"
+  },
+  "hepatitis": {
+    "code": "HCC 29",
+    "description": "Chronic Hepatitis"
+  },
+  "hepatitis c": {
+    "code": "HCC 29",
+    "description": "Chronic Hepatitis"
+  },
+  "hepatitis b": {
+    "code": "HCC 29",
+    "description": "Chronic Hepatitis"
+  },
+  "fatty liver": {
+    "code": "HCC 29",
+    "description": "Chronic Hepatitis"
+  },
+  "nash": {
+    "code": "HCC 29",
+    "description": "Chronic Hepatitis"
+  },
+  "nonalcoholic steatohepatitis": {
+    "code": "HCC 29",
+    "description": "Chronic Hepatitis"
+  },
+  "multiple sclerosis": {
+    "code": "HCC 77",
+    "description": "Multiple Sclerosis"
+  },
+  "ms": {
+    "code": "HCC 77",
+    "description": "Multiple Sclerosis"
+  },
+  "parkinson's disease": {
+    "code": "HCC 78",
+    "description": "Parkinson's and Huntington's Diseases"
+  },
+  "parkinson": {
+    "code": "HCC 78",
+    "description": "Parkinson's and Huntington's Diseases"
+  },
+  "huntington's disease": {
+    "code": "HCC 78",
+    "description": "Parkinson's and Huntington's Diseases"
+  },
+  "seizure disorder": {
+    "code": "HCC 79",
+    "description": "Seizure Disorders and Convulsions"
+  },
+  "epilepsy": {
+    "code": "HCC 79",
+    "description": "Seizure Disorders and Convulsions"
+  },
+  "schizophrenia": {
+    "code": "HCC 57",
+    "description": "Schizophrenia"
+  },
+  "bipolar disorder": {
+    "code": "HCC 58",
+    "description": "Major Depressive, Bipolar, and Paranoid Disorders"
+  },
+  "myocardial infarction": {
+    "code": "HCC 86",
+    "description": "Acute Myocardial Infarction"
+  },
+  "heart attack": {
+    "code": "HCC 86",
+    "description": "Acute Myocardial Infarction"
+  },
+  "coronary artery disease": {
+    "code": "HCC 88",
+    "description": "Unstable Angina and Other Acute Ischemic Heart Disease"
+  },
+  "cad": {
+    "code": "HCC 88",
+    "description": "Unstable Angina and Other Acute Ischemic Heart Disease"
+  },
+  "angina": {
+    "code": "HCC 88",
+    "description": "Unstable Angina and Other Acute Ischemic Heart Disease"
+  },
+  "atrial fibrillation": {
+    "code": "HCC 96",
+    "description": "Specified Heart Arrhythmias"
+  },
+  "afib": {
+    "code": "HCC 96",
+    "description": "Specified Heart Arrhythmias"
+  },
+  "arrhythmia": {
+    "code": "HCC 96",
+    "description": "Specified Heart Arrhythmias"
+  },
+  "hypothyroidism": {
+    "code": "HCC 21",
+    "description": "Protein-Calorie Malnutrition"
+  },
+  "hyperthyroidism": {
+    "code": "HCC 21",
+    "description": "Protein-Calorie Malnutrition"
+  },
+  "hyperlipidemia": {
+    "code": "HCC 88",
+    "description": "Unstable Angina and Other Acute Ischemic Heart Disease"
+  },
+  "dyslipidemia": {
+    "code": "HCC 88",
+    "description": "Unstable Angina and Other Acute Ischemic Heart Disease"
+  },
+  "osteoporosis": {
+    "code": "HCC 39",
+    "description": "Bone/Joint/Muscle Infections/Necrosis"
+  },
+  "fracture": {
+    "code": "HCC 39",
+    "description": "Bone/Joint/Muscle Infections/Necrosis"
+  },
+  "osteopenia": {
+    "code": "HCC 39",
+    "description": "Bone/Joint/Muscle Infections/Necrosis"
+  },
+  "neuropathy": {
+    "code": "HCC 75",
+    "description": "Polyneuropathy"
+  },
+  "peripheral neuropathy": {
+    "code": "HCC 75",
+    "description": "Polyneuropathy"
+  },
+  "retinopathy": {
+    "code": "HCC 18",
+    "description": "Diabetes with Chronic Complications"
+  },
+  "nephropathy": {
+    "code": "HCC 138",
+    "description": "Chronic Kidney Disease, Moderate (Stage 3)"
+  },
+  "anemia": {
+    "code": "HCC 2",
+    "description": "Sepsis, Severe Blood Related Conditions"
+  },
+  "leukocytosis": {
+    "code": "HCC 2",
+    "description": "Sepsis, Severe Blood Related Conditions"
+  },
+  "leukopenia": {
+    "code": "HCC 2",
+    "description": "Sepsis, Severe Blood Related Conditions"
+  },
+  "thrombocytopenia": {
+    "code": "HCC 2",
+    "description": "Sepsis, Severe Blood Related Conditions"
+  },
+  "thrombocytosis": {
+    "code": "HCC 2",
+    "description": "Sepsis, Severe Blood Related Conditions"
+  },
+  "pancytopenia": {
+    "code": "HCC 2",
+    "description": "Sepsis, Severe Blood Related Conditions"
+  },
+  "neutropenia": {
+    "code": "HCC 2",
+    "description": "Sepsis, Severe Blood Related Conditions"
+  },
+  "hypoglycemia": {
+    "code": "HCC 17",
+    "description": "Diabetes with Acute Complications"
+  },
+  "hyperglycemia": {
+    "code": "HCC 17",
+    "description": "Diabetes with Acute Complications"
+  },
+  "hyponatremia": {
+    "code": "HCC 22",
+    "description": "Metabolic Disorders"
+  },
+  "hypernatremia": {
+    "code": "HCC 22",
+    "description": "Metabolic Disorders"
+  },
+  "hypokalemia": {
+    "code": "HCC 22",
+    "description": "Metabolic Disorders"
+  },
+  "hyperkalemia": {
+    "code": "HCC 22",
+    "description": "Metabolic Disorders"
+  },
+  "acidosis": {
+    "code": "HCC 22",
+    "description": "Metabolic Disorders"
+  },
+  "alkalosis": {
+    "code": "HCC 22",
+    "description": "Metabolic Disorders"
+  },
+  "pneumonia": {
+    "code": "HCC 114",
+    "description": "Pneumonia"
+  },
+  "atherosclerosis": {
+    "code": "HCC 88",
+    "description": "Unstable Angina and Other Acute Ischemic Heart Disease"
+  },
+  "stenosis": {
+    "code": "HCC 88",
+    "description": "Unstable Angina and Other Acute Ischemic Heart Disease"
+  },
+  "cardiomegaly": {
+    "code": "HCC 85",
+    "description": "Congestive Heart Failure"
+  },
+  "edema": {
+    "code": "HCC 85",
+    "description": "Congestive Heart Failure"
+  },
+  "effusion": {
+    "code": "HCC 113",
+    "description": "Respiratory Dependence/Tracheostomy Status"
+  },
+  "proteinuria": {
+    "code": "HCC 138",
+    "description": "Chronic Kidney Disease, Moderate (Stage 3)"
+  },
+  "hematuria": {
+    "code": "HCC 138",
+    "description": "Chronic Kidney Disease, Moderate (Stage 3)"
+  },
+  "glycosuria": {
+    "code": "HCC 19",
+    "description": "Diabetes without Complication"
+  }
+}
