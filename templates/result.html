@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Processing Results - Medical Document Processor</title>
+    <link rel="stylesheet" href="https://cdn.replit.com/agent/bootstrap-agent-dark-theme.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
+        <div class="container">
+            <a class="navbar-brand" href="/">
+                <i class="fas fa-file-medical"></i> Medical Document Processor
+            </a>
+        </div>
+    </nav>
+
+    <div class="container">
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="alert alert-{{ category }} alert-dismissible fade show" role="alert">
+                        {{ message }}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+
+        <div class="row">
+            <div class="col-md-10 mx-auto">
+                <div class="card">
+                    <div class="card-header bg-success text-white">
+                        <h5 class="mb-0">Document Processing Results</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="step-progress mb-4">
+                            <div class="step completed">
+                                <div class="step-circle"><i class="fas fa-check"></i></div>
+                                <div class="step-label">Upload</div>
+                            </div>
+                            <div class="step completed">
+                                <div class="step-circle"><i class="fas fa-check"></i></div>
+                                <div class="step-label">Process</div>
+                            </div>
+                            <div class="step active">
+                                <div class="step-circle">3</div>
+                                <div class="step-label">Results</div>
+                            </div>
+                        </div>
+
+                        <div class="alert alert-info">
+                            <i class="fas fa-info-circle me-2"></i> Document processed: <strong>{{ filename }}</strong>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <ul class="nav nav-tabs" id="resultTabs" role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link active" id="summary-tab" data-bs-toggle="tab" data-bs-target="#summary" type="button" role="tab" aria-controls="summary" aria-selected="true">
+                                            <i class="fas fa-clipboard-list me-2"></i>Summary
+                                        </button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="extracted-text-tab" data-bs-toggle="tab" data-bs-target="#extracted-text" type="button" role="tab" aria-controls="extracted-text" aria-selected="false">
+                                            <i class="fas fa-font me-2"></i>Extracted Text
+                                        </button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="medical-terms-tab" data-bs-toggle="tab" data-bs-target="#medical-terms" type="button" role="tab" aria-controls="medical-terms" aria-selected="false">
+                                            <i class="fas fa-heartbeat me-2"></i>Medical Terms
+                                        </button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="hcc-codes-tab" data-bs-toggle="tab" data-bs-target="#hcc-codes" type="button" role="tab" aria-controls="hcc-codes" aria-selected="false">
+                                            <i class="fas fa-code me-2"></i>HCC Codes
+                                        </button>
+                                    </li>
+                                </ul>
+                                
+                                <div class="tab-content p-3 border border-top-0 rounded-bottom" id="resultTabsContent">
+                                    <div class="tab-pane fade show active" id="summary" role="tabpanel" aria-labelledby="summary-tab">
+                                        <h5>Processing Summary</h5>
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <div class="card mb-3">
+                                                    <div class="card-body text-center">
+                                                        <h3 class="card-title">{{ medical_terms|length }}</h3>
+                                                        <p class="card-text">Medical Terms Extracted</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="card mb-3">
+                                                    <div class="card-body text-center">
+                                                        <h3 class="card-title">{{ hcc_codes|length }}</h3>
+                                                        <p class="card-text">HCC Codes Mapped</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="card mb-3">
+                                                    <div class="card-body text-center">
+                                                        {% set high_confidence = hcc_codes|selectattr('confidence', 'equalto', 'high')|list|length %}
+                                                        <h3 class="card-title">
+                                                            {% if hcc_codes|length > 0 %}
+                                                                {{ (high_confidence / hcc_codes|length * 100)|int }}%
+                                                            {% else %}
+                                                                0%
+                                                            {% endif %}
+                                                        </h3>
+                                                        <p class="card-text">High Confidence Mappings</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <h5 class="mt-4">Key Medical Conditions</h5>
+                                        <ul class="list-group">
+                                            {% for term in medical_terms[0:5] %}
+                                                <li class="list-group-item">
+                                                    <div class="d-flex justify-content-between align-items-center">
+                                                        <span>{{ term.term }}</span>
+                                                        <span class="badge bg-primary">{{ term.category }}</span>
+                                                    </div>
+                                                </li>
+                                            {% else %}
+                                                <li class="list-group-item">No medical conditions detected</li>
+                                            {% endfor %}
+                                        </ul>
+                                        
+                                        <h5 class="mt-4">Primary HCC Codes</h5>
+                                        <ul class="list-group">
+                                            {% set high_confidence_codes = hcc_codes|selectattr('confidence', 'equalto', 'high')|list %}
+                                            {% for code in high_confidence_codes[:5] %}
+                                                <li class="list-group-item">
+                                                    <div class="d-flex justify-content-between align-items-center">
+                                                        <span>{{ code.term }}</span>
+                                                        <span class="badge bg-success">{{ code.hcc_code }}</span>
+                                                    </div>
+                                                </li>
+                                            {% else %}
+                                                <li class="list-group-item">No high-confidence HCC codes mapped</li>
+                                            {% endfor %}
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="tab-pane fade" id="extracted-text" role="tabpanel" aria-labelledby="extracted-text-tab">
+                                        <h5>Extracted Text</h5>
+                                        <div class="text-area-container">
+                                            <pre class="p-3 bg-dark rounded">{{ extracted_text }}</pre>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="tab-pane fade" id="medical-terms" role="tabpanel" aria-labelledby="medical-terms-tab">
+                                        <h5>Identified Medical Terms</h5>
+                                        <div class="row">
+                                            {% for term in medical_terms %}
+                                                <div class="col-md-6">
+                                                    <div class="medical-term">
+                                                        <h6 class="mb-1">{{ term.term }}</h6>
+                                                        <div>
+                                                            <span class="badge bg-secondary">{{ term.category }}</span>
+                                                            <small class="text-muted">Source: {{ term.source }}</small>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            {% else %}
+                                                <div class="col">
+                                                    <div class="alert alert-warning">
+                                                        No medical terms were identified in the document.
+                                                    </div>
+                                                </div>
+                                            {% endfor %}
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="tab-pane fade" id="hcc-codes" role="tabpanel" aria-labelledby="hcc-codes-tab">
+                                        <h5>HCC Code Mappings</h5>
+                                        <table class="table table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th>Medical Term</th>
+                                                    <th>HCC Code</th>
+                                                    <th>Description</th>
+                                                    <th>Confidence</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                {% for code in hcc_codes %}
+                                                    <tr>
+                                                        <td>{{ code.term }}</td>
+                                                        <td><span class="badge bg-primary">{{ code.hcc_code }}</span></td>
+                                                        <td>{{ code.description }}</td>
+                                                        <td>
+                                                            {% if code.confidence == 'high' %}
+                                                                <span class="badge bg-success">High</span>
+                                                            {% elif code.confidence == 'medium' %}
+                                                                <span class="badge bg-warning text-dark">Medium</span>
+                                                            {% else %}
+                                                                <span class="badge bg-danger">Low</span>
+                                                            {% endif %}
+                                                        </td>
+                                                    </tr>
+                                                {% else %}
+                                                    <tr>
+                                                        <td colspan="4" class="text-center">No HCC codes mapped</td>
+                                                    </tr>
+                                                {% endfor %}
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="d-flex justify-content-between mt-4">
+                            <a href="{{ url_for('index') }}" class="btn btn-secondary">
+                                <i class="fas fa-arrow-left me-2"></i>Process Another Document
+                            </a>
+                            <button id="export-btn" class="btn btn-primary">
+                                <i class="fas fa-file-export me-2"></i>Export Results
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer mt-5 py-3 bg-dark">
+        <div class="container text-center">
+            <span class="text-muted">Medical Document Processor &copy; 2023</span>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
